@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Blood_donate_signup">
+
+
+    <EditText
+        android:id="@+id/Donor_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Name" />
+
+    <EditText
+        android:id="@+id/Donor_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Contact number"
+        android:layout_below="@+id/Donor_name"/>
+
+    <EditText
+        android:id="@+id/Donor_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="E-mail id"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/Donor_phone"/>
+
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blood_grp_spinner"
+        android:entries="@array/Blood_Group"
+        android:layout_marginTop="10dp"
+        android:scrollbarSize="10dp"
+        android:layout_below="@+id/Donor_email"/>
+
+    <EditText
+        android:id="@+id/Donor_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="number"
+        android:layout_below="@+id/blood_grp_spinner"/>
+
+
+
+    <EditText
+        android:id="@+id/Donor_signin_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Create your Password"
+        android:layout_below="@+id/Donor_age"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Donor_signin_password"
+        android:text="Fetch my current location"
+        android:id="@+id/get_location"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/show_loc"
+        android:text="(Your location will be displayed here)"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_below="@+id/get_location"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/show_loc"
+        android:layout_marginTop="30dp"
+        android:text="Create my account"
+        android:id="@+id/create_account"/>
+
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:id="@+id/Signup_progress_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/create_account"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fetched_lat"
+        android:text="your lat here"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fetched_long"
+        android:text="your long here"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"/>
+
+
+</RelativeLayout>

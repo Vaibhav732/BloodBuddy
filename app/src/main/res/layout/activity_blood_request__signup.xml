@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Blood_donate_signup">
+
+
+    <EditText
+        android:id="@+id/Requester_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Name" />
+
+    <EditText
+        android:id="@+id/Requester_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Contact number"
+        android:layout_below="@+id/Requester_name"/>
+
+    <EditText
+        android:id="@+id/Requester_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="E-mail id"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/Requester_phone"/>
+
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Requester_blood_grp_spinner"
+        android:entries="@array/Blood_Group"
+        android:layout_marginTop="10dp"
+        android:scrollbarSize="10dp"
+        android:layout_below="@+id/Requester_email"/>
+
+    <EditText
+        android:id="@+id/Requester_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="No. of units of blood required"
+        android:inputType="number"
+        android:layout_below="@+id/Requester_blood_grp_spinner"/>
+
+
+
+    <EditText
+        android:id="@+id/Requester_signin_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Create your Password"
+        android:layout_below="@+id/Requester_age"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Requester_signin_password"
+        android:text="Fetch my current location"
+        android:id="@+id/Requester_get_location"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Requester_show_loc"
+        android:text="(Your location will be displayed here)"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_below="@+id/Requester_get_location"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Requester_show_loc"
+        android:layout_marginTop="30dp"
+        android:text="Create my account"
+        android:id="@+id/Requester_create_account"/>
+
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:id="@+id/Requester_Signup_progress_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Requester_create_account"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Requester_fetched_lat"
+        android:text="your lat here"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Requester_fetched_long"
+        android:text="your long here"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+package com.example.bloodbuddy;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+public class Reset_requester_password extends AppCompatActivity {
+
+    Button reset_requester_password;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_reset_requester_password);
+
+        reset_requester_password = (Button) findViewById(R.id.login_from_reset_window);
+
+        reset_requester_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Toast.makeText(getApplicationContext(),"Password reseted successfully",Toast.LENGTH_SHORT).show();
+                Intent account_revived_intent = new Intent(Reset_requester_password.this,Display_blood_donors.class);
+                startActivity(account_revived_intent);
+            }
+        });
+
+    }
+}

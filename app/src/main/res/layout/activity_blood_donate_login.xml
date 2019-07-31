@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Blood_donate_login">
+
+
+    <EditText
+        android:id="@+id/Donor_login_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="E-mail id"
+        android:inputType="textEmailAddress" />
+
+
+    <EditText
+        android:id="@+id/Donor_login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Enter your Password"
+        android:layout_below="@+id/Donor_login_email"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Donor_login_password"
+        android:text="Login Safely"
+        android:onClick="login_safely"
+        android:id="@+id/login_from_login"/>
+
+    <!--<Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_from_login"
+        android:text="Forgot password? Reset here!"
+        android:id="@+id/reset_donor_password" />-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/quote2"
+        android:layout_below="@+id/login_from_login"
+        android:layout_marginTop="20dp"
+        android:text="New User?"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_dark_background"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quote2"
+        android:text="Register here!"
+        android:id="@+id/back_to_signup" />
+
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Login_progress_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+
+
+</RelativeLayout>

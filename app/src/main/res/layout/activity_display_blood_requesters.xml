@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Display_blood_requesters">
+
+
+   <androidx.appcompat.widget.Toolbar
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/toolbar"
+       android:background="@color/cardview_shadow_start_color" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Donor_name_display"
+        android:textAlignment="center"
+        android:text="(Donor name here)"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/toolbar"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:padding="10dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/donor_blood_grp_display"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:text="(Donor bloood grp here)"
+        android:layout_below="@+id/toolbar"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentLeft="true"/>
+
+
+   <!-- <TextView
+        android:id="@+id/cardview_for_display_requesters"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Nearby blood requesters will be displayed here in cardview format!"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_below="@+id/donor_blood_grp_display"
+        android:layout_margin="10dp"
+        android:padding="10dp"/>
+-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/display_requester_recycler_view"
+        android:layout_below="@+id/donor_blood_grp_display"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimaryDark"></androidx.recyclerview.widget.RecyclerView>
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete_account_progress_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

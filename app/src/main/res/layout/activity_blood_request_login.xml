@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Blood_donate_login">
+
+
+    <EditText
+        android:id="@+id/Requester_login_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="E-mail id"
+        android:inputType="textEmailAddress" />
+
+
+    <EditText
+        android:id="@+id/Requester_login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Enter your Password"
+        android:layout_below="@+id/Requester_login_email"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Requester_login_password"
+        android:text="Login Safely"
+        android:id="@+id/Requester_login_from_login"/>
+
+   <!-- <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Requester_login_from_login"
+        android:text="Forgot password? Reset here!"
+        android:id="@+id/reset_Requester_password" />
+-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Requester_quote2"
+        android:layout_below="@+id/Requester_login_from_login"
+        android:text="New User?"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_dark_background"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Requester_quote2"
+        android:text="Register here!"
+        android:id="@+id/Request_back_to_signup" />
+
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Requester_progress_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+
+
+</RelativeLayout>
