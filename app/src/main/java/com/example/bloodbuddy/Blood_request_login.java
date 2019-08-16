@@ -118,18 +118,29 @@ public class Blood_request_login extends AppCompatActivity {
                     category_check_ref.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            String categogry_check   = dataSnapshot.getRef().getParent().getPath().toString().replace("/","").trim();
+
+
+                            finish();
+                            Toast.makeText(getApplicationContext(),"Login successful."+"\n"+"Welcome Requester!",Toast.LENGTH_SHORT).show();
+                            Display_blood_requesters_intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(Display_blood_requesters_intent);
+
+
+
+
+                            /*String categogry_check   = dataSnapshot.getRef().getParent().getPath().toString().replace("/","").trim();
+                            Toast.makeText(getApplicationContext(), categogry_check,Toast.LENGTH_SHORT).show();
 
                             if (categogry_check == "Requester"){
                                 finish();
-                                Toast.makeText(getApplicationContext(),"I know you are a requester dude!!!" + "\n" + "Login successful."+"\n"+"Welcome Donor!",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(),"Login successful."+"\n"+"Welcome Requester!",Toast.LENGTH_SHORT).show();
                                 Display_blood_requesters_intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(Display_blood_requesters_intent);
                             }
-                            else {
+                            else if((categogry_check == "Donor")){
                                 Toast.makeText(getApplicationContext(),"You have registered as a donor," + "\n"+ "not a requester!",Toast.LENGTH_LONG).show();
                                 Toast.makeText(getApplicationContext(),"Please go to Donors' portal.",Toast.LENGTH_SHORT).show();
-                            }
+                            }*/
                         }
 
                         @Override

@@ -212,7 +212,7 @@ public class Blood_donate_signup extends AppCompatActivity {
 
                             if (task.isSuccessful()){
 
-                                Toast.makeText(getApplicationContext(), "Account created successfully." + "\n" + "You may now Login to your account", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), "Account created successfully.", Toast.LENGTH_LONG).show();
                                 Intent login_after_signup_intent = new Intent(Blood_donate_signup.this, Blood_donate_login.class);
                                 startActivity(login_after_signup_intent);
                                 finish();

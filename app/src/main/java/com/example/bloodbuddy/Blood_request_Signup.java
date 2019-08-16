@@ -198,7 +198,7 @@ public class Blood_request_Signup extends AppCompatActivity {
 
                             if (task.isSuccessful()){
 
-                                Toast.makeText(getApplicationContext(), "Account created successfully." + "\n" + "You may now Login to your account", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), "Account created successfully.", Toast.LENGTH_LONG).show();
                                 Intent login_after_signup_intent = new Intent(Blood_request_Signup.this, Blood_request_login.class);
                                 startActivity(login_after_signup_intent);
                                 finish();
